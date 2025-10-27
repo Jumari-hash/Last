@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "TurboLite Optimizer"
+include ':app'
+=======
+rootProject.name = "ShortsBox"
+include ':app'
+>>>>>>> 00dac746f4768d9795e6d4ce86dc9ae59fc26435

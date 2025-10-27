@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TurboLite Optimizer</string>
+    
+    <!-- Tab Titles -->
+    <string name="tab_ram">RAM</string>
+    <string name="tab_cpu">CPU</string>
+    <string name="tab_storage">Storage</string>
+    <string name="tab_battery">Battery</string>
+    
+    <!-- RAM Booster -->
+    <string name="ram_title">RAM Booster</string>
+    <string name="ram_total">Total RAM</string>
+    <string name="ram_used">Used</string>
+    <string name="ram_free">Free</string>
+    <string name="ram_boost">BOOST NOW</string>
+    <string name="ram_boosting">Boosting…</string>
+    <string name="ram_boosted">RAM Optimized!</string>
+    
+    <!-- CPU Monitor -->
+    <string name="cpu_title">CPU Monitor</string>
+    <string name="cpu_usage">CPU Usage</string>
+    <string name="cpu_temp">Temperature</string>
+    <string name="cpu_cores">CPU Cores</string>
+    <string name="cpu_frequency">Frequency</string>
+    
+    <!-- Storage Cleaner -->
+    <string name="storage_title">Storage Cleaner</string>
+    <string name="storage_total">Total Storage</string>
+    <string name="storage_used">Used</string>
+    <string name="storage_free">Free</string>
+    <string name="storage_scan">SCAN NOW</string>
+    <string name="storage_clean">CLEAN NOW</string>
+    <string name="storage_scanning">Scanning…</string>
+    <string name="storage_cache">Cache Size</string>
+    
+    <!-- Battery Saver -->
+    <string name="battery_title">Battery Saver</string>
+    <string name="battery_level">Battery Level</string>
+    <string name="battery_health">Health</string>
+    <string name="battery_temp">Temperature</string>
+    <string name="battery_voltage">Voltage</string>
+    <string name="battery_time">Time Remaining</string>
+    <string name="battery_status">Status</string>
+    
+    <!-- Common -->
+    <string name="percentage">%d%%</string>
+    <string name="gb_format">%.2f GB</string>
+    <string name="mb_format">%.0f MB</string>
+    <string name="temp_format">%d°C</string>
+</resources>

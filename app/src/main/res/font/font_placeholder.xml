@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Font Placeholder File
+
+Required Fonts (Download from Google Fonts):
+1. Orbitron (Bold, Medium) - https://fonts.google.com/specimen/Orbitron
+2. Rajdhani (Bold, Medium) - https://fonts.google.com/specimen/Rajdhani
+
+Instructions:
+1. Download the font files (.ttf)
+2. Rename them as:
+   - orbitron_bold.ttf
+   - orbitron_medium.ttf
+   - rajdhani_bold.ttf
+   - rajdhani_medium.ttf
+3. Place them in this 'font' directory
+4. Delete this placeholder file
+
+Android will automatically use system default fonts if these are missing.
+-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/orbitron_medium" />
+</font-family>

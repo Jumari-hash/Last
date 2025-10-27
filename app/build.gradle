@@ -1,0 +1,104 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+<<<<<<< HEAD
+    namespace 'com.turbolite.optimizer'
+    compileSdk 35
+    buildToolsVersion "35.0.0"
+
+    defaultConfig {
+        applicationId "com.turbolite.optimizer"
+        minSdk 19
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+        
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        vectorDrawables {
+            useSupportLibrary true
+        }
+=======
+    namespace 'com.shortsbox.com'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.shortsbox.player"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+>>>>>>> 00dac746f4768d9795e6d4ce86dc9ae59fc26435
+    }
+
+    buildTypes {
+        release {
+<<<<<<< HEAD
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
+    }
+    
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    
+    buildFeatures {
+        viewBinding true
+=======
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+>>>>>>> 00dac746f4768d9795e6d4ce86dc9ae59fc26435
+    }
+}
+
+dependencies {
+<<<<<<< HEAD
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+    
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+=======
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.6'
+>>>>>>> 00dac746f4768d9795e6d4ce86dc9ae59fc26435
+}

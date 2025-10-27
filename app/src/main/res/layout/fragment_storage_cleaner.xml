@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardStorageStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/translucent_dark"
+            app:cardCornerRadius="20dp"
+            app:strokeColor="@color/glass_border"
+            app:strokeWidth="1dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvStorageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/storage_title"
+                    android:textSize="24sp"
+                    android:textColor="@color/neon_green"
+                    android:fontFamily="@font/orbitron_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ProgressBar
+                    android:id="@+id/progressStorage"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="24dp"
+                    android:progressTint="@color/neon_green"
+                    android:progressBackgroundTint="#33FFFFFF"
+                    app:layout_constraintTop_toBottomOf="@id/tvStorageTitle"/>
+
+                <TextView
+                    android:id="@+id/tvStoragePercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="@font/rajdhani_medium"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/progressStorage"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutStorageInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvStoragePercentage">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/storage_used"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:fontFamily="@font/rajdhani_medium"/>
+
+                        <TextView
+                            android:id="@+id/tvStorageUsed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 GB"
+                            android:textSize="18sp"
+                            android:textColor="@color/electric_orange"
+                            android:fontFamily="@font/rajdhani_bold"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/storage_total"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:fontFamily="@font/rajdhani_medium"/>
+
+                        <TextView
+                            android:id="@+id/tvStorageTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 GB"
+                            android:textSize="18sp"
+                            android:textColor="@color/text_primary"
+                            android:fontFamily="@font/rajdhani_bold"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCacheInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/translucent_dark"
+            app:cardCornerRadius="20dp"
+            app:strokeColor="@color/glass_border"
+            app:strokeWidth="1dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/cardStorageStatus">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/storage_cache"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="@font/rajdhani_bold"/>
+
+                <TextView
+                    android:id="@+id/tvCacheSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculating..."
+                    android:textSize="28sp"
+                    android:textColor="@color/neon_cyan"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:layout_marginTop="8dp"/>
+
+                <ProgressBar
+                    android:id="@+id/progressScanning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    android:indeterminateTint="@color/neon_cyan"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnScan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/storage_scan"
+            android:textSize="18sp"
+            android:fontFamily="@font/rajdhani_bold"
+            android:layout_marginBottom="12dp"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/electric_purple"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/cardCacheInfo"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClean"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/storage_clean"
+            android:textSize="18sp"
+            android:fontFamily="@font/rajdhani_bold"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/neon_green"
+            android:textColor="@color/deep_black"
+            app:layout_constraintTop_toBottomOf="@id/btnScan"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

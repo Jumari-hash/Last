@@ -1,0 +1,34 @@
+buildscript {
+<<<<<<< HEAD
+    ext.kotlin_version = '1.9.20'
+=======
+>>>>>>> 00dac746f4768d9795e6d4ce86dc9ae59fc26435
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+<<<<<<< HEAD
+        classpath 'com.android.tools.build:gradle:8.5.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+=======
+        classpath 'com.android.tools.build:gradle:8.0.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
+>>>>>>> 00dac746f4768d9795e6d4ce86dc9ae59fc26435
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+<<<<<<< HEAD
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+=======
+}
+>>>>>>> 00dac746f4768d9795e6d4ce86dc9ae59fc26435
