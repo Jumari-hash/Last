@@ -1,39 +1,45 @@
-#!/bin/sh
+#!/usr/bin/env sh
+#
+# Gradle start up script for POSIX shells.
+#
 
-<<<<<<< HEAD
 ##############################################################################
-# Gradle startup script for UN*X
+# Check if JAVA_HOME is set, otherwise use java from PATH
 ##############################################################################
-
-APP_NAME="Gradle"
-APP_BASE_NAME=`basename "$0"`
-
-GRADLE_USER_HOME=${GRADLE_USER_HOME:-$HOME/.gradle}
-
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
-
-CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
-
-exec "$JAVACMD" $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS \"-Dorg.gradle.appname=$APP_BASE_NAME\" -classpath \"$CLASSPATH\" org.gradle.wrapper.GradleWrapperMain \"$@\"
-=======
-# Gradle wrapper script for Unix
-
-APP_BASE_NAME=`basename "$0"`
-DIRNAME=`dirname "$0"`
-
-# Locate Java
-if [ -z "$JAVA_HOME" ]; then
-  JAVA_CMD=$(which java)
+if [ -n "$JAVA_HOME" ]; then
+    JAVA_BIN="$JAVA_HOME/bin/java"
 else
-  JAVA_CMD="$JAVA_HOME/bin/java"
+    JAVA_BIN="java"
 fi
 
-if [ ! -x "$JAVA_CMD" ]; then
-  echo "ERROR: JAVA_HOME is not set correctly or java not found in PATH."
-  exit 1
+##############################################################################
+# Resolve the location of the script, so it can run from any directory
+##############################################################################
+PRG="$0"
+while [ -h "$PRG" ] ; do
+    ls=`ls -ld "$PRG"`
+    link=`expr "$ls" : '.*-> \(.*\)$'`
+    if expr "$link" : '/.*' > /dev/null; then
+        PRG="$link"
+    else
+        PRG=`dirname "$PRG"`"/$link"
+    fi
+done
+APP_HOME=`dirname "$PRG"`
+
+##############################################################################
+# Locate Gradle Wrapper JAR and Properties
+##############################################################################
+WRAPPER_JAR="$APP_HOME/gradle/wrapper/gradle-wrapper.jar"
+WRAPPER_PROPERTIES="$APP_HOME/gradle/wrapper/gradle-wrapper.properties"
+
+if [ ! -f "$WRAPPER_JAR" ]; then
+    echo "Downloading Gradle Wrapper..."
+    mkdir -p "$APP_HOME/gradle/wrapper"
+    curl -s -L -o "$WRAPPER_JAR" "https://services.gradle.org/distributions/gradle-8.7-bin.zip"
 fi
 
-CLASSPATH="$DIRNAME/gradle/wrapper/gradle-wrapper.jar"
-
-exec "$JAVA_CMD" -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
->>>>>>> 00dac746f4768d9795e6d4ce86dc9ae59fc26435
+##############################################################################
+# Run Gradle
+##############################################################################
+exec "$JAVA_BIN" -Dorg.gradle.appname=gradlew -classpath "$WRAPPER_JAR" org.gradle.wrapper.GradleWrapperMain "$@"
